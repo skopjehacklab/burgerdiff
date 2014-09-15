@@ -1,0 +1,101 @@
+@keyframes fade-out {
+    from {
+        opacity: 0;
+        transform: scale(12) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(720deg);
+    }
+}
+
+@keyframes nova-animacija {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.25) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('http://download.4-designer.com/files/2012121220/Cartoon-cat-the-background-01-vector-material-20282.jpg');
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+#app {
+    text-align: left;
+    padding: 10px;
+    width: 600px;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    box-shadow: 0 0 20px black;
+    transform: skew(-3deg,15deg);
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+li {
+    padding-left: 0;
+}
+li:focus {
+    font-style: bold;
+}
+
+.thumbnail {
+    width: 49%;
+    float: left;
+}
+.thumbnail:nth-child(2n+1) {
+    clear: both;
+}
+
+.thumbnail.selected {
+    background-color: white;
+    border: 5px solid red;
+}
+.thumbnail.selected img {
+    animation: nova-animacija 2s ease-in-out infinite;
+}
+
+.common {
+    color: #999;
+}
+.common:before {
+    content: " ";
+}
+
+.plus {
+    color: green;
+}
+.plus:before {
+    content: "+";
+}
+
+.minus {
+    color: red;
+}
+.minus:before {
+    content: "-";
+}
+
+.common:before, .plus:before, .minus:before {
+    display: inline-block;
+    min-width: 1em;
+    text-align: center;
+    animation: fade-out 1s ease-in-out;
+}
