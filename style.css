@@ -1,7 +1,18 @@
 @keyframes fade-out {
     from {
         opacity: 0;
-        transform: scale(12) rotate(0deg);
+        transform: scale(102) rotate(0deg);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) rotate(720deg);
+    }
+}
+
+@-webkit-keyframes fade-out {
+    from {
+        opacity: 0;
+        transform: scale(102) rotate(0deg);
     }
     to {
         opacity: 1;
@@ -10,6 +21,20 @@
 }
 
 @keyframes nova-animacija {
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.25) rotate(0deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg);
+    }
+}
+
+@-webkit-keyframes nova-animacija {
     0% {
         transform: scale(1) rotate(0deg);
     }
@@ -71,6 +96,7 @@ li:focus {
     border: 5px solid red;
 }
 .thumbnail.selected img {
+    -webkit-animation: nova-animacija 2s ease-in-out infinite;
     animation: nova-animacija 2s ease-in-out infinite;
 }
 
@@ -100,4 +126,5 @@ li:focus {
     min-width: 1em;
     text-align: center;
     animation: fade-out 1s ease-in-out;
+    -webkit-animation: fade-out 1s ease-in-out;
 }
