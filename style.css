@@ -28,12 +28,14 @@
 }
 
 body {
+    padding-top: 30px;
     background-image: url('http://download.4-designer.com/files/2012121220/Cartoon-cat-the-background-01-vector-material-20282.jpg');
     text-align: center;
     font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 #app {
+    margin-top: 30px;
     text-align: left;
     padding: 10px;
     width: 600px;
