@@ -1,0 +1,69 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('http://download.4-designer.com/files/2012121220/Cartoon-cat-the-background-01-vector-material-20282.jpg');
+    text-align: center;
+}
+
+#app {
+    margin-top: 30px;
+    text-align: left;
+    padding: 10px;
+    width: 600px;
+    background-color: white;
+    overflow: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+li {
+    padding-left: 0;
+}
+
+
+.thumbnail {
+    width: 50%;
+    float: left;
+    padding: 5px;
+}
+.thumbnail:nth-child(2n+1) {
+    clear: both;
+}
+
+.thumbnail.selected {
+    background-color: white;
+    border: 1px solid silver;
+}
+
+.common {
+    color: #999;
+}
+.common:before {
+    content: " ";
+}
+
+.plus {
+    color: green;
+}
+.plus:before {
+    content: "+";
+}
+
+.minus {
+    color: red;
+}
+.minus:before {
+    content: "-";
+}
+
+.common:before, .plus:before, .minus:before {
+    display: inline-block;
+    min-width: 1em;
+    text-align: center;
+}
