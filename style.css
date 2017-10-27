@@ -91,6 +91,11 @@ li:focus {
     clear: both;
 }
 
+.thumbnail img {
+  width: 200px;
+  height: 200px;
+}
+
 .thumbnail.selected {
     background-color: white;
     border: 5px solid red;

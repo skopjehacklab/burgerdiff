@@ -15,7 +15,7 @@ function diff(ours, theirs) {
 var Ingredient = React.createClass({
     displayName: 'Ingredient',
     render: function() {
-        return D.li({ className: this.props.type }, this.props.name);
+        return D.li({ className: this.props.type, key: this.props.name }, this.props.name);
     }
 });
 
@@ -49,7 +49,8 @@ var Thumbnail = React.createClass({
     render: function() {
         var burger = this.props.burger;
         var title = D.h2(null, burger.title);
-        var image = D.img({ src: burger.imgSrc });
+        //var image = D.img({ src: burger.imgSrc });
+        var image = D.img({ src: 'burger.png' });
         var ingredients = Ingredients({
             ingredients: burger.ingredients,
             selectedBurger: this.props.selectedBurger

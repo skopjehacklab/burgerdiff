@@ -67,3 +67,9 @@ li {
     min-width: 1em;
     text-align: center;
 }
+
+
+
+.thumbnail img {
+  display:none;
+}
